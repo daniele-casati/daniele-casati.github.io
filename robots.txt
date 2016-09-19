@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://danielecasati.com/sitemap.xml
