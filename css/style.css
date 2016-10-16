@@ -447,6 +447,25 @@ figure {
   }
 }
 
+#bioinfo {
+  width:100%;
+  border-collapse: collapse;
+}
+#bioinfo tr td {
+  padding:5px 10px;
+}
+
+#bioinfo .odd {
+  background: rgba(255,255,255,0.5);
+  border-right:1px solid #000000;
+  border-bottom:1px solid #000000;
+}
+
+#bioinfo .even {
+  background: rgba(255,255,255,0.3);
+  border-bottom:1px solid #000000;
+}
+
 .company {
   font-size:22px;
   margin:0;
