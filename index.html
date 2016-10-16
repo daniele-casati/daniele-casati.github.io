@@ -273,13 +273,24 @@
 	
 	<!-- Open Tab from Link -->
 	<script type="text/javascript">
-		$(document).ready(function(){
-			showTab('aaa');
+		$(document).ready(function() {
+			$(".section").not(":first").hide();
+			$("ul#menu li:first").addClass("active").show();
+			$("ul#menu li").click(function() {
+				$("ul#menu li.active").removeClass("active");
+				$(this).addClass("active");
+				$(".section").slideUp();
+				$($('a',this).attr("href")).slideDown('slow');
+				return false;
+			});
 		});
-
-		function showTab(tab){
-			$('.nav-tabs a[href="#' + tab + '"]').tab('show');
-		};
+		function showTab(tabname) {
+			$("ul#menu li.active").removeClass("active");
+			$('.'+tabname).parent().addClass("active");
+			$(".section").slideUp();
+			$($('.'+tabname).attr("href")).slideDown('slow');
+			return false;
+		}
 	</script>
 
 	<!-- Start of StatCounter Code for Default Guide -->
