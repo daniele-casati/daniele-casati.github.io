@@ -70,7 +70,7 @@
 				<li class="active"><a href="#" data-tab="1"><span class="icon icon-glass"></span><span class="menu-text">Profile</span></a></li>
 				<li><a href="#" data-tab="2"><span class="icon icon-graduation-cap"></span><span class="menu-text">Education</span></a></li>
 				<li><a href="#" data-tab="3"><span class="icon icon-black-tie"></span><span class="menu-text">Experience</span></a></li>
-				<li><a class="contact" href="#contact" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li>
+				<li><a href="#" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li>
 			</ul>
 			<div class="fh5co-tab-content active" data-content="1">
 				<div class="fh5co-content-inner text-center">
@@ -91,8 +91,8 @@
 							<p>My education includes a Master’s degree in <a href="http://www.rw.ethz.ch/">scientific computing</a> at ETH Zurich and
 							a Bachelor's degree in physics at the University of Pavia. I have always been economically independent during my university studies thanks to scholarships.</p>
 							
-							<p>Please feel free to <a href="mail (at) danielecasati (dot) com" rel="nofollow" onclick="this.href='mailto:' + 'mail' + '@' + 'danielecasati.com'">drop me an email</a> or
-							<a onclick="showTab('contact')" style="cursor:pointer;">use the contact form</a>.<br>I am looking forward to hearing from you.</p>
+							<p>Please feel free to <a href="mail (at) danielecasati (dot) com" rel="nofollow" onclick="this.href='mailto:' + 'mail' + '@' + 'danielecasati.com'">drop me an email</a>.
+							<br>I am looking forward to hearing from you.</p>
 						</div>
 					</div>
 					<ul class="fh5co-social">
@@ -255,27 +255,6 @@
 				</div>
 			</div>
 		</footer>
-			<!-- Open Tab from Link -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".section").not(":first").hide();
-			$("ul#menu li:first").addClass("active").show();
-			$("ul#menu li").click(function() {
-				$("ul#menu li.active").removeClass("active");
-				$(this).addClass("active");
-				$(".section").slideUp();
-				$($('a',this).attr("href")).slideDown('slow');
-				return false;
-			});
-		});
-		function showTab(tabname) {
-			$("ul#menu li.active").removeClass("active");
-			$('.'+tabname).parent().addClass("active");
-			$(".section").slideUp();
-			$($('.'+tabname).attr("href")).slideDown('slow');
-			return false;
-		}
-	</script>
 	</div>
 	</div>
 	
@@ -292,8 +271,6 @@
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 	
-
-
 	<!-- Start of StatCounter Code for Default Guide -->
 	<script type="text/javascript">
 	var sc_project = 8826904; 
