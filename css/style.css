@@ -506,4 +506,12 @@ figure {
   cursor:pointer;
 }
 
+#map-canvas {
+  min-width: 200px;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  border: 1px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */

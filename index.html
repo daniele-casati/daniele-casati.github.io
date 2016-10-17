@@ -68,8 +68,8 @@
 		<div class="fh5co-tab-wrap">
 			<ul class="fh5co-tab-menu">
 				<li class="active"><a href="#" data-tab="1"><span class="icon icon-glass"></span><span class="menu-text">Profile</span></a></li>
-				<li><a href="#" data-tab="2"><span class="icon icon-graduation-cap"></span><span class="menu-text">Education</span></a></li>
-				<li><a href="#" data-tab="3"><span class="icon icon-black-tie"></span><span class="menu-text">Experience</span></a></li>
+				<li><a href="#" data-tab="2"><span class="icon icon-black-tie"></span><span class="menu-text">Experience</span></a></li>
+				<li><a href="#" data-tab="3"><span class="icon icon-graduation-cap"></span><span class="menu-text">Education</span></a></li>
 				<li><a href="#" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li>
 			</ul>
 			<div class="fh5co-tab-content active" data-content="1">
@@ -106,6 +106,59 @@
 				</div>
 			</div>
 			<div class="fh5co-tab-content" data-content="2">
+				<div class="fh5co-content-inner">
+					<div class="row">
+						<div class="col-md-12">
+
+							<div class="fh5co-feature">
+								<div class="fh5co-icon">
+									<i class="icon-black-tie"></i>
+								</div>
+								<div class="fh5co-text">
+									<h2>2016 – Present</h2>
+									<h3>ETH Zurich</h3>
+									<p>PhD student, “Enhanced Multiple Multipoles Method for Computational Electromagnetism”</p>
+								</div>
+							</div>
+
+							<div class="fh5co-feature">
+								<div class="fh5co-icon">
+									<i class="icon-black-tie"></i>
+								</div>
+								<div class="fh5co-text">
+									<h2>2015–2016</h2>
+									<h3>Fintegral Consulting</h3>
+									<p>Quantitative Risk Consultant</p>
+								</div>
+							</div>
+
+							<div class="fh5co-feature">
+								<div class="fh5co-icon">
+									<i class="icon-black-tie"></i>
+								</div>
+								<div class="fh5co-text">
+									<h2>2015–2015</h2>
+									<h3>SCOR</h3>
+									<p>Group Financial Modelling and Risk Analysis</p>
+								</div>
+							</div>
+
+							<div class="fh5co-feature">
+								<div class="fh5co-icon">
+									<i class="icon-black-tie"></i>
+								</div>
+								<div class="fh5co-text">
+									<h2>2014–2015</h2>
+									<h3>UBS</h3>
+									<p>Statistical Risk Aggregation Methodology</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-tab-content" data-content="3">
 				<div class="fh5co-content-inner">
 					<div class="row">
 						<div class="col-md-12">
@@ -160,59 +213,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="fh5co-tab-content" data-content="3">
-				<div class="fh5co-content-inner">
-					<div class="row">
-						<div class="col-md-12">
-
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2016 – Present</h2>
-									<h3>ETH Zurich</h3>
-									<p>PhD student, “Enhanced Multiple Multipoles Method for Computational Electromagnetism”</p>
-								</div>
-							</div>
-
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2015–2016</h2>
-									<h3>Fintegral Consulting</h3>
-									<p>Quantitative Risk Consultant</p>
-								</div>
-							</div>
-
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2015–2015</h2>
-									<h3>SCOR</h3>
-									<p>Group Financial Modelling and Risk Analysis</p>
-								</div>
-							</div>
-
-							<div class="fh5co-feature">
-								<div class="fh5co-icon">
-									<i class="icon-black-tie"></i>
-								</div>
-								<div class="fh5co-text">
-									<h2>2014–2015</h2>
-									<h3>UBS</h3>
-									<p>Statistical Risk Aggregation Methodology</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="fh5co-tab-content" data-content="4">
 				<div class="fh5co-content-inner">
 					<div class="row">
@@ -244,12 +244,12 @@
 										<td class="odd">Email</td>
 										<td class="even"><a href="mail (at) danielecasati (dot) com" rel="nofollow"
 															onclick="this.href='mailto:' + 'mail' + '@' + 'danielecasati.com'">
-															mail(at)DanieleCasati(dot)com</a></td>
+															mail (at) DanieleCasati (dot) com</a></td>
 									</tr>
 								</tbody>
 							</table>
 
-							<img alt="Map" src="http://maps.googleapis.com/maps/api/staticmap?center=47.377455,8.536715&zoom=10&size=520x260" />           
+							<div id="map-canvas"></div>
 
 	<!-- 					<div class="col-md-4 col-sm-6 col-xs-12 text-center">
 								<div class="chart" data-percent="95"><span><strong>HTML5</strong>95%</span></div>
@@ -300,6 +300,24 @@
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+	
+	<!-- Resize Google Map -->
+	<script type="text/javascript">
+	$(function() {
+		var mapOptions = {
+			zoom: 10,
+			center: new google.maps.LatLng(47.377455, 8.536715)
+		};
+		var map = new google.maps.Map($("#map-canvas")[0], mapOptions);
+
+		// Listen for the window resize event & trigger Google Maps to update too
+		$(window).resize(function() {
+			// (The 'map' here is the result of the created 'var map = ...' above)
+			google.maps.event.trigger(map, "resize");
+		});
+	});
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&dummy=.js"></script>
 	
 	<!-- Start of StatCounter Code for Default Guide -->
 	<script type="text/javascript">
