@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
 
-	xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
-	https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+    https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-	<url>
-		<loc>https://www.danielecasati.com/</loc>
+    <url>
+        <loc>https://www.danielecasati.com/</loc>
 
-		<lastmod>2023-06-07T20:40:00+00:00</lastmod>
+        <lastmod>2025-06-16T20:40:00+00:00</lastmod>
 
-		<changefreq>yearly</changefreq>
+        <changefreq>yearly</changefreq>
 
-		<priority>1.0</priority>
-	</url>
+        <priority>1.0</priority>
+    </url>
 
 </urlset>
