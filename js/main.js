@@ -1,95 +1,59 @@
-;(function () {
-	
-	'use strict';
+(() => {
+  "use strict";
 
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
+  const isMobile = /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
 
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+  const main = $("#fh5co-main");
+  const TAB_MENU_LINKS = $$(".fh5co-tab-menu a");
 
-	var getHeight = function() {
-		var extraHeight = 0;
+  function setContainerHeight() {
+    const active = $(".fh5co-tab-content.active");
+    if (!active || !main) return;
+    const extra = isMobile ? 50 : 0;
+    const target = active.getBoundingClientRect().height + extra;
+    if (!main.style.transition) main.style.transition = "height 300ms ease";
+    main.style.height = `${target}px`;
+  }
 
-		if ( isMobile.any() ) extraHeight = 50;
-		
-		setTimeout(function(){
-			$('#fh5co-main').stop().animate({
-				'height': $('.fh5co-tab-content.active').height() + extraHeight
-			});
-		}, 200);
-	};
+  function switchTab(link) {
+    const tab = link.getAttribute("data-tab");
+    if (!tab) return;
 
-	var pieChart = function() {
-		$('.chart').easyPieChart({
-			scaleColor: false,
-			lineWidth: 10,
-			lineCap: 'butt',
-			barColor: '#17e7a4',
-			trackColor:	"#000000",
-			size: 160,
-			animate: 1000
-		});
-	};
+    $$(".fh5co-tab-menu li").forEach(li => li.classList.remove("active"));
+    link.closest("li")?.classList.add("active");
 
-	var tabContainer = function() {
-		getHeight();
-		$(window).resize(function(){
-			getHeight();
-		})
-	};
+    const current = $(".fh5co-tab-content.active");
+    const next = $(`.fh5co-tab-content[data-content="${tab}"]`);
+    if (!next || current === next) return;
 
-	var tabClickTrigger = function() {
-		$('.fh5co-tab-menu a').on('click', function(event) {
-			event.preventDefault();
-			var $this = $(this),
-				data = $this.data('tab'),
-				pie = $this.data('pie');
+    current.classList.add("animated", "fadeOutDown");
 
-			// add/remove active class
-			$('.fh5co-tab-menu li').removeClass('active');
-			$this.closest('li').addClass('active');
+    setTimeout(() => {
+      current.classList.remove("active", "animated", "fadeOutDown", "fadeInUp");
+      next.classList.add("animated", "fadeInUp", "active");
+      setContainerHeight();
+      setTimeout(() => next.classList.remove("animated", "fadeInUp"), 500);
+    }, 500);
+  }
 
-			$('.fh5co-tab-content.active').addClass('animated fadeOutDown');
+  function onResize() {
+    clearTimeout(onResize._t);
+    onResize._t = setTimeout(setContainerHeight, 150);
+  }
 
-			setTimeout(function(){
-				$('.fh5co-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
-				$('.fh5co-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
-				getHeight();
-			}, 500);
+  document.addEventListener("DOMContentLoaded", () => {
+    setContainerHeight();
 
-			if ( pie === 'yes' ) {
-				setTimeout(function(){
-					pieChart();
-				}, 800);
-			}
-			
-		})
-	};
+    TAB_MENU_LINKS.forEach(a => {
+      a.addEventListener("click", e => {
+        e.preventDefault();
+        switchTab(a);
+      });
+    });
 
-	// Document on load.
-	$(function(){
-		tabContainer();
-		tabClickTrigger();
-
-	});
-
-
-}());
+    window.addEventListener("resize", onResize, { passive: true });
+  });
+})();

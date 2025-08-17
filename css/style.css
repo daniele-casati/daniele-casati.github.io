@@ -454,64 +454,14 @@ figure {
 #bioinfo tr td {
   padding:5px 10px;
 }
-
 #bioinfo .odd {
   background: rgba(255,255,255,0.5);
   border-right:1px solid #000000;
   border-bottom:1px solid #000000;
 }
-
 #bioinfo .even {
   background: rgba(255,255,255,0.3);
   border-bottom:1px solid #000000;
-}
-
-.company {
-  font-size:22px;
-  margin:0;
-  padding:0;
-}
-
-.title {
-  font-size:20px;
-  margin:0;
-  padding:0;
-}
-
-.description {
-  font-size:15px;
-  margin:10px 0 30px;
-  padding:0;
-}
-
-#contactform label {
-  width:100%;
-  display:block;
-}
-
-#contactform input,
-#contactform textarea {
-  width:100%;
-  background-color:rgba(0,0,0,0.5);
-  color:white;
-  border:none;
-  padding:5px;
-}
-
-#contactform input.button {
-  background-color:#4f4f4f;
-  padding:10px;
-  width:auto;
-  float:right;
-  cursor:pointer;
-}
-
-#map-canvas {
-  min-width: 200px;
-  width: 100%;
-  min-height: 200px;
-  height: auto;
-  border: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
