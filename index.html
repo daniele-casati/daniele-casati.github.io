@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Daniele Casati — Software Engineer</title>
+    <meta charset="utf-8">
+    <title>Daniele Casati – Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Daniele Casati — Software Engineer with a PhD in computational mathematics from ETH Zurich and leadership experience." />
-    <meta name="author" content="Daniele Casati" />
-    <link rel="canonical" href="https://www.danielecasati.com/"/>
+    <meta name="description" content="Daniele Casati – Software Engineer with a PhD in computational mathematics from ETH Zurich and leadership experience.">
+    <meta name="author" content="Daniele Casati">
+    <link rel="canonical" href="https://www.danielecasati.com/">
 
     <!-- 
 	//////////////////////////////////////////////////////
@@ -30,20 +30,21 @@
         gtag('config', 'G-Q0K71DP3C8');
     </script>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Daniele Casati — Software Engineer" />
-    <meta property="og:description" content="Daniele Casati — Software Engineer with a PhD in computational mathematics from ETH Zurich and leadership experience." />
-    <meta property="og:url" content="https://www.danielecasati.com/" />
-    <meta property="og:image" content="https://www.danielecasati.com/images/profile_img.jpg" />
-    <meta property="og:image:width" content="1500" />
-    <meta property="og:image:height" content="2000" />
-    <meta property="og:image:alt" content="Portrait of Daniele Casati" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daniele Casati – Software Engineer">
+    <meta property="og:description" content="Daniele Casati – Software Engineer with a PhD in computational mathematics from ETH Zurich and leadership experience.">
+    <meta property="og:url" content="https://www.danielecasati.com/">
+    <meta property="og:image" content="https://www.danielecasati.com/images/profile_img.jpg">
+    <meta property="og:image:width" content="1500">
+    <meta property="og:image:height" content="2000">
+    <meta property="og:image:alt" content="Portrait of Daniele Casati">
     <meta property="og:site_name" content="Daniele Casati">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
-    
+
+    <link rel="preload" as="image" href="images/bg_img.jpg">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -81,12 +82,12 @@
     </script>
 </head>
 <body style="background-image: url(images/bg_img.jpg);">
-    <div id="fh5co-main">
+    <main id="fh5co-main">
 
         <div class="fh5co-tab-wrap">
             <ul class="fh5co-tab-menu">
                 <li class="active"><a href="#" data-tab="1"><span class="icon icon-user"></span><span class="menu-text">Profile</span></a></li>
-                <li><a href="#" data-tab="4" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li>
+                <li><a href="#" data-tab="2" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li>
             </ul>
 
             <div class="fh5co-tab-content active" data-content="1">
@@ -100,13 +101,13 @@
                                     <img src="images/profile_img.jpg"
                                         alt="Portrait of Daniele Casati"
                                         width="1500" height="2000"
-                                        loading="lazy"
+                                        fetchpriority="high"
                                         style="max-width:50%; height:auto;">
                                 </picture>
                             </figure>
                             <h1>Daniele Casati</h1>
                             <p>Welcome to my website!</p>
-                                                    
+
                             <p>
                                 My name is Daniele Casati and
                                 <br>
@@ -116,13 +117,13 @@
                                 <br>
                                 from ETH Zurich and leadership experience.
                             </p>
-                            
+
                             <p>
                                 I developed a .NET bioprocess analytics platform in my free time, featuring a database, a CRUD-based backend, and a web-based UI, all runnable with Docker:
                                 <br>
                                 <a href="https://github.com/daniele-casati/AidedBio" target="_blank" rel="noopener noreferrer">View AidedBio on GitHub.</a>
                             </p>
-                            
+
                             <p>
                                 Please <a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me">connect with me on LinkedIn</a> or
                                 <a class="email-link" href="#">send me an email</a>.
@@ -132,19 +133,39 @@
                         </div>
                     </div>
                     <ul class="fh5co-social">
-                        <li><a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me"><i class="icon-university"></i></a></li>
-                        <li><a href="https://github.com/daniele-casati" target="_blank" rel="noopener noreferrer me"><i class="icon-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me"><i class="icon-linkedin"></i></a></li>
-                        <li><a class="email-link" href="#"><i class="icon-envelope"></i></a></li>
+                        <li>
+                            <a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me" aria-label="Google Scholar profile of Daniele Casati">
+                                <i class="icon-university"></i>
+                                <span class="sr-only">Google Scholar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/daniele-casati" target="_blank" rel="noopener noreferrer me" aria-label="GitHub profile of Daniele Casati">
+                                <i class="icon-github"></i>
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn profile of Daniele Casati">
+                                <i class="icon-linkedin"></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="email-link" href="#" aria-label="Email Daniele Casati">
+                                <i class="icon-envelope"></i>
+                                <span class="sr-only">Email</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="fh5co-tab-content" data-content="4">
+            <div class="fh5co-tab-content" data-content="2">
                 <div class="fh5co-content-inner">
                     <div class="row">
                         <div class="col-md-12">
-                            
+
                             <table id="bioinfo">
                                 <tbody>
                                     <tr>
@@ -193,8 +214,8 @@
             </div>
         </footer>
 
-    </div>
-    
+    </main>
+
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
