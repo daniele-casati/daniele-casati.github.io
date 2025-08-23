@@ -37,7 +37,8 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -524,18 +525,16 @@ figure {
 }
 
 #bioinfo tr td {
-  padding: 5px 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #000;
 }
 
 #bioinfo .odd {
   background: rgba(255, 255, 255, 0.5);
-  border-right: 1px solid #000000;
-  border-bottom: 1px solid #000000;
 }
 
 #bioinfo .even {
   background: rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid #000000;
 }
 
 /* ====================================================================
