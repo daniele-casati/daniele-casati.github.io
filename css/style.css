@@ -1,16 +1,22 @@
 @font-face {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  src:
+    url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"),
+    url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"),
+    url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 /* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
+ *
+ *   Template Style
+ *   Edit this section
+ *
+ * ======================================================= */
+
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 300;
@@ -18,17 +24,20 @@ body {
   line-height: 1.5;
   color: #7f7f7f;
   color: rgba(255, 255, 255, 0.7);
-  background: #fff;
+  background: #0a0a0a;
   height: 100%;
   position: relative;
+
+  background-image: url("images/bg_img.jpg");
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 768px) {
   body {
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
 }
 
@@ -38,7 +47,10 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-a:hover, a:active, a:focus {
+
+a:hover,
+a:active,
+a:focus {
   color: #17e7a4;
   outline: none;
 }
@@ -47,7 +59,12 @@ p {
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #fff;
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 400;
@@ -72,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-main {
   max-width: 760px;
   min-height: 600px;
-  margin: 5em auto 5em auto;
+  margin: 5em auto;
   position: relative;
   background: rgba(0, 0, 0, 0.85);
   overflow: hidden;
@@ -84,29 +101,33 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-main {
-    margin: 2em .5em 5em .5em;
+    margin: 2em 0.5em 5em;
   }
 }
 
 .fh5co-tab-wrap {
   position: relative;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu {
   list-style: none;
   text-align: center;
   margin-bottom: 2em;
   position: relative;
-  top: -.5em;
+  top: -0.5em;
   padding: 0;
   margin: 0;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu {
     top: -7px;
   }
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -116,8 +137,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a {
-  padding: 2em 1em 1em 1em;
+  padding: 2em 1em 1em;
   position: relative;
   color: rgba(255, 255, 255, 0.5);
   z-index: 10;
@@ -129,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a .icon {
   display: block;
   position: relative;
@@ -138,22 +161,26 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a .menu-text {
   display: block;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu li a .menu-text {
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu li a {
-    padding: 1em .5em .5em .5em;
+    padding: 1em 0.5em 0.5em;
   }
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a:after {
   position: absolute;
   content: "";
@@ -173,36 +200,45 @@ h1, h2, h3, h4, h5, h6 {
   -ms-border-radius: 7px;
   border-radius: 7px;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover {
   color: #fff;
   text-decoration: none;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover .icon {
   bottom: 10px;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu li a:hover .icon {
-    bottom: 0px;
+    bottom: 0;
   }
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li a:hover:after {
   height: 100%;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li.active .icon {
   bottom: 10px;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-menu li.active .icon {
-    bottom: 0px;
+    bottom: 0;
   }
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li.active > a {
   color: #fff;
   text-decoration: none;
 }
+
 .fh5co-tab-wrap .fh5co-tab-menu li.active > a:after {
   height: 100%;
 }
+
 .fh5co-tab-wrap .fh5co-tab-content {
   padding-left: 4em;
   padding-right: 4em;
@@ -212,25 +248,29 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-content {
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
+
 .fh5co-tab-wrap .fh5co-tab-content.active {
   opacity: 1;
   visibility: visible;
 }
+
 .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
-  padding: 7em 2em 5em 2em;
+  padding: 7em 2em 5em;
   float: left;
   width: 100%;
   position: relative;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-tab-wrap .fh5co-tab-content .fh5co-content-inner {
-    padding: 4em .5em 5em .5em;
+    padding: 4em 0.5em 5em 0.5em;
   }
 }
 
@@ -244,34 +284,40 @@ figure {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  line-height: .7;
+  line-height: 0.7;
 }
+
 .fh5co-counter .fh5co-number.fh5co-left {
   float: left;
   width: 30%;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-counter .fh5co-number.fh5co-left {
     width: 100%;
     line-height: 1.2;
   }
 }
+
 .fh5co-counter .fh5co-text {
   float: right;
   text-align: left;
   width: 70%;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-counter .fh5co-text {
     width: 100%;
     text-align: center;
   }
 }
+
 .fh5co-counter .fh5co-text h3 {
   margin: 0;
   padding: 0;
   position: relative;
 }
+
 .fh5co-counter .fh5co-text h3.border-bottom:after {
   content: "";
   width: 50px;
@@ -282,6 +328,7 @@ figure {
   margin: 0;
   text-align: center;
 }
+
 .fh5co-social li {
   padding: 0;
   margin: 0;
@@ -291,6 +338,7 @@ figure {
   zoom: 1;
   *display: inline;
 }
+
 .fh5co-social li a {
   font-size: 22px;
   color: #fff;
@@ -304,15 +352,20 @@ figure {
   -ms-border-radius: 7px;
   border-radius: 7px;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-social li a {
     padding: 10px 8px;
   }
 }
+
 .fh5co-social li a:hover {
   color: #17e7a4;
 }
-.fh5co-social li a:hover, .fh5co-social li a:active, .fh5co-social li a:focus {
+
+.fh5co-social li a:hover,
+.fh5co-social li a:active,
+.fh5co-social li a:focus {
   outline: none;
   text-decoration: none;
 }
@@ -322,40 +375,49 @@ figure {
   width: 100%;
   float: left;
 }
+
 .fh5co-feature .fh5co-icon {
   float: left;
   width: 10%;
   display: block;
   margin-top: 5px;
 }
+
 .fh5co-feature .fh5co-icon i {
   color: #17e7a4;
   font-size: 40px;
 }
+
 .fh5co-feature .fh5co-text {
   float: right;
   width: 82%;
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-feature .fh5co-text {
     width: 82%;
   }
 }
+
 @media screen and (max-width: 480px) {
   .fh5co-feature .fh5co-text {
     width: 72%;
   }
 }
-.fh5co-feature .fh5co-text h2, .fh5co-feature .fh5co-text h3 {
+
+.fh5co-feature .fh5co-text h2,
+.fh5co-feature .fh5co-text h3 {
   margin: 0;
   padding: 0;
 }
+
 .fh5co-feature .fh5co-text h3 {
   font-weight: 300;
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 20px;
 }
+
 .fh5co-feature .fh5co-text h2 {
   font-size: 16px;
   letter-spacing: 2px;
@@ -366,10 +428,11 @@ figure {
 .chart {
   width: 160px;
   height: 160px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
   position: relative;
   text-align: center;
 }
+
 .chart span {
   position: absolute;
   top: 50%;
@@ -377,9 +440,11 @@ figure {
   margin-top: -30px;
   width: 100%;
 }
+
 .chart span strong {
   display: block;
 }
+
 .chart canvas {
   position: absolute;
   left: 0;
@@ -398,12 +463,15 @@ figure {
   padding: 20px 20px;
   line-height: 1.2;
 }
+
 #fh5co-footer small {
   font-size: 14px;
 }
+
 #fh5co-footer .fh5co-author {
   display: block;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-footer .fh5co-author {
     display: -moz-inline-stack;
@@ -423,6 +491,7 @@ figure {
 .row-bottom-padded-lg {
   padding-bottom: 7em;
 }
+
 @media screen and (max-width: 768px) {
   .row-bottom-padded-lg {
     padding-bottom: 1em;
@@ -432,6 +501,7 @@ figure {
 .row-bottom-padded-md {
   padding-bottom: 4em;
 }
+
 @media screen and (max-width: 768px) {
   .row-bottom-padded-md {
     padding-bottom: 1em;
@@ -441,6 +511,7 @@ figure {
 .row-bottom-padded-sm {
   padding-bottom: 1em;
 }
+
 @media screen and (max-width: 768px) {
   .row-bottom-padded-sm {
     padding-bottom: 1em;
@@ -448,20 +519,32 @@ figure {
 }
 
 #bioinfo {
-  width:100%;
+  width: 100%;
   border-collapse: collapse;
 }
+
 #bioinfo tr td {
-  padding:5px 10px;
+  padding: 5px 10px;
 }
+
 #bioinfo .odd {
-  background: rgba(255,255,255,0.5);
-  border-right:1px solid #000000;
-  border-bottom:1px solid #000000;
+  background: rgba(255, 255, 255, 0.5);
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
+
 #bioinfo .even {
-  background: rgba(255,255,255,0.3);
-  border-bottom:1px solid #000000;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid #000000;
+}
+
+/* ====================================================================
+ *   animate.css overrides (ensure this file loads AFTER animate.css)
+ * ==================================================================== */
+
+.animated {
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
 }
 
 /*# sourceMappingURL=style.css.map */
