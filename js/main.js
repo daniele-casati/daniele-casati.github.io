@@ -7,8 +7,10 @@
   const tabWrapper = $("#fh5co-main");
   const isCoarsePointer = window.matchMedia?.("(pointer: coarse)")?.matches === true;
   function setContainerHeight() {
+    if (!tabWrapper) return;
+
     const currentTab = $(".fh5co-tab-content.active");
-    if (!currentTab || !tabWrapper) return;
+    if (!currentTab) return;
 
     const extraHeight = isCoarsePointer ? 50 : 0;
     const targetHeight = currentTab.getBoundingClientRect().height + extraHeight;
@@ -24,9 +26,16 @@
     const tabId = anchor.getAttribute("data-tab");
     if (!tabId) return;
 
-    const currentTab = $(".fh5co-tab-content.active");
     const nextTab = $(`.fh5co-tab-content[data-content="${tabId}"]`);
-    if (!nextTab || currentTab === nextTab) return;
+    if (!nextTab) return;
+
+    const currentTab = $(".fh5co-tab-content.active");
+    if (!currentTab) {
+      nextTab.classList.add("active");
+      setContainerHeight();
+      return;
+    }
+    if (currentTab === nextTab) return;
 
     $$(".fh5co-tab-menu li").forEach(listItem =>
       listItem.classList.remove("active")
@@ -36,9 +45,9 @@
     isAnimating = true;
     currentTab.classList.remove("animated", "fadeInUp");
 
-    const onOutEnd = (event) => {
+    const onAnimationEnd = (event) => {
       if (event.target !== currentTab) return;
-      currentTab.removeEventListener("animationend", onOutEnd);
+      currentTab.removeEventListener("animationend", onAnimationEnd);
       currentTab.classList.remove("active", "animated", "fadeOutDown");
 
       nextTab.classList.add("active", "animated", "fadeInUp");
@@ -50,7 +59,7 @@
       }, { once: true });
     };
 
-    currentTab.addEventListener("animationend", onOutEnd);
+    currentTab.addEventListener("animationend", onAnimationEnd);
     requestAnimationFrame(() => {
       currentTab.classList.add("animated", "fadeOutDown");
     });
