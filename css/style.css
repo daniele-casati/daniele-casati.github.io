@@ -70,13 +70,54 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-.profile-card {
-  width: min(100%, 760px);
+.profile-card,
+.error-card {
   overflow: hidden;
   background: var(--card-background);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.28);
+}
+
+.profile-card {
+  width: min(100%, 760px);
+}
+
+.error-card {
+  width: min(100%, 600px);
+  padding: clamp(3rem, 9vw, 5rem) clamp(1.5rem, 8vw, 4rem);
+  text-align: center;
+}
+
+.error-card h1 {
+  margin-bottom: 0.6em;
+}
+
+.error-code {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  color: #06271c;
+  background: var(--accent);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #06271c;
+  background: #69f6c8;
 }
 
 .profile-content {
