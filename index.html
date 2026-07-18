@@ -36,10 +36,6 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
 
-    <link rel="preload" as="image" href="images/bg_img.jpg">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script type="application/ld+json">
@@ -73,154 +69,56 @@
     }
     </script>
 </head>
-<body style="background-image: url(images/bg_img.jpg);">
-    <main id="fh5co-main">
+<body>
+    <main class="profile-card">
+        <section class="profile-content" aria-labelledby="profile-name">
+            <picture>
+                <source srcset="images/profile_img.avif" type="image/avif">
+                <source srcset="images/profile_img.webp" type="image/webp">
+                <img class="profile-photo"
+                    src="images/profile_img.jpg"
+                    alt="Portrait of Daniele Casati"
+                    width="600" height="800"
+                    fetchpriority="high">
+            </picture>
 
-        <div class="fh5co-tab-wrap">
-            <ul class="fh5co-tab-menu">
-                <li class="active"><a href="#" data-tab="1"><span class="icon icon-user"></span><span class="menu-text">Profile</span></a></li>
-                <!-- <li><a href="#" data-tab="2" data-pie="yes"><span class="icon icon-fighter-jet"></span><span class="menu-text">Contact</span></a></li> -->
-            </ul>
+            <h1 id="profile-name">Daniele Casati</h1>
+            <p class="welcome">Welcome to my website!</p>
 
-            <div class="fh5co-tab-content active" data-content="1">
-                <div class="fh5co-content-inner text-center">
-                    <div class="row row-bottom-padded-sm">
-                        <div class="col-md-12">
-                            <figure>
-                                <picture>
-                                    <source srcset="images/profile_img.avif" type="image/avif">
-                                    <source srcset="images/profile_img.webp" type="image/webp">
-                                    <img src="images/profile_img.jpg"
-                                        alt="Portrait of Daniele Casati"
-                                        width="1500" height="2000"
-                                        fetchpriority="high"
-                                        style="max-width:50%; height:auto;">
-                                </picture>
-                            </figure>
-                            <h1>Daniele Casati</h1>
-                            <p>Welcome to my website!</p>
+            <p>
+                Backend software engineer with a <a href="https://math.ethz.ch/news-and-events/news/d-math-news/2020/01/doctoral-exam-of-daniele-casati.html" target="_blank" rel="noopener noreferrer me">PhD in applied maths</a> from ETH Zurich and <a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me">250+ citations</a>.
+            </p>
 
-                            <p>
-                                Backend software engineer with a <a href="https://math.ethz.ch/news-and-events/news/d-math-news/2020/01/doctoral-exam-of-daniele-casati.html" target="_blank" rel="noopener noreferrer me">PhD in applied maths</a> from ETH Zurich and <a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me">200+ citations</a>.
-                            </p>
-                            
-                            <p>
-                                Successfully self-petitioned for U.S. permanent residence under the National Interest Waiver.
-                            </p>
+            <p>
+                Successfully self-petitioned for U.S. permanent residence under the National Interest Waiver.
+            </p>
 
-                            <p>
-                                Developed a bioprocess analytics tool in my free time:
-                                <a href="https://github.com/daniele-casati/AidedBio" target="_blank" rel="noopener noreferrer">View AidedBio on GitHub.</a>
-                            </p>
+            <p>
+                Developed a bioprocess analytics tool in my free time:
+                <a href="https://github.com/daniele-casati/AidedBio" target="_blank" rel="noopener noreferrer">View AidedBio on GitHub.</a>
+            </p>
 
-                            <p>
-                                <a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me">Connect with me on LinkedIn</a> or
-                                <a class="email-link" href="#">send me an email</a>.
-                                <br>
-                                Looking forward to hearing from you!
-                            </p>
-                        </div>
-                    </div>
-                    <ul class="fh5co-social">
-                        <li>
-                            <a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me" aria-label="Google Scholar profile of Daniele Casati">
-                                <i class="icon-university"></i>
-                                <span class="sr-only">Google Scholar</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/daniele-casati" target="_blank" rel="noopener noreferrer me" aria-label="GitHub profile of Daniele Casati">
-                                <i class="icon-github"></i>
-                                <span class="sr-only">GitHub</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me" aria-label="LinkedIn profile of Daniele Casati">
-                                <i class="icon-linkedin"></i>
-                                <span class="sr-only">LinkedIn</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="email-link" href="#" aria-label="Email Daniele Casati">
-                                <i class="icon-envelope"></i>
-                                <span class="sr-only">Email</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <p>Looking forward to hearing from you!</p>
 
-            <!--
-            <div class="fh5co-tab-content" data-content="2">
-                <div class="fh5co-content-inner">
-                    <div class="row">
-                        <div class="col-md-12">
+            <nav aria-label="Profiles and contact">
+                <ul class="profile-links">
+                    <li><a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me">Google Scholar</a></li>
+                    <li><a href="https://github.com/daniele-casati" target="_blank" rel="noopener noreferrer me">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me">LinkedIn</a></li>
+                    <li><a href="mailto:mail@danielecasati.com">Email</a></li>
+                </ul>
+            </nav>
+        </section>
 
-                            <table id="bioinfo">
-                                <tbody>
-                                    <tr>
-                                        <td class="odd">Name</td>
-                                        <td class="even">Daniele Casati</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">Location</td>
-                                        <td class="even">Zurich, Switzerland</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">Languages</td>
-                                        <td class="even">English, Italian, German</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">Google Scholar</td>
-                                        <td class="even"><a href="https://scholar.google.ch/citations?user=W03lHPkAAAAJ" target="_blank" rel="noopener noreferrer me">Daniele Casati</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">GitHub</td>
-                                        <td class="even"><a href="https://github.com/daniele-casati" target="_blank" rel="noopener noreferrer me">GitHub.com/daniele-casati</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">LinkedIn</td>
-                                        <td class="even"><a href="https://www.linkedin.com/in/danielecasati/" target="_blank" rel="noopener noreferrer me">LinkedIn.com/in/DanieleCasati</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="odd">Email</td>
-                                        <td class="even"><a class="email-link" href="#">mail (at) DanieleCasati (dot) com</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-
-        <footer id="fh5co-footer">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <small>
-                        &copy; <span id="year"></span> &middot; By Daniele Casati &middot; <a href="https://www.danielecasati.com/">DanieleCasati.com</a>
-                    </small>
-                </div>
-            </div>
+        <footer class="site-footer">
+            <small>
+                &copy; <span id="year">2026</span> &middot; By Daniele Casati &middot; <a href="https://www.danielecasati.com/">DanieleCasati.com</a>
+            </small>
         </footer>
-
     </main>
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
-
-        (function(){
-            var user = "mail";
-            var domain = "danielecasati.com";
-            var address = user + "@" + domain;
-            document.querySelectorAll(".email-link").forEach(function(link){
-                link.setAttribute("href", "mailto:" + address);
-                link.setAttribute("data-email", address);
-                link.setAttribute("aria-label", "Email " + address);
-            });
-        })();
     </script>
-
-    <script defer src="js/main.js"></script>
 </body>
 </html>
